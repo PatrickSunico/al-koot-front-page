@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/scripts.min.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body id="page-top" data-spy="page-scroll" data-target=".navbar-fixed-top">
     <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
       <!-- Brand and toggle get grouped for better mobile display-->
       <div class="container-fluid">
@@ -38,32 +41,38 @@
       <!-- Indicators-->
       <ol class="carousel-indicators custom-indicators">
         <li data-target="#al-koot-carousel" data-slide-to="0" class="active"> </li>
-        <li data-target="#al-koot-carousel" data-slide-to="1"> </li>
+        <li data-target="#al-koot-carousel" data-slide-to="1"></li>
       </ol>
       <!-- Wrapper for Slides-->
       <div class="carousel-inner">
         <div class="item active">
           <!-- Set the first background image using inline CSS below.-->
+          <div class="vignette"></div>
           <div style="background-image:url('img-min/Slide-1.jpg');" class="bg">
-            <div class="carousel-caption">
-              <h3>Caption 1</h3>
-              <h2>Text Heading</h2>
+            <div class="text-container">
+              <h2>Qatar 2030 Together for </h2>
+              <h1>A Safe World!</h1><span class="ghost-button">
+                <button href="#" class="pull-right btn btn-sharp">Read More</button></span>
             </div>
           </div>
         </div>
         <div class="item">
           <!-- Set the second background image using inline CSS below.-->
+          <div class="vignette"></div>
           <div style="background-image:url('img-min/Slide-2.jpg');" class="bg">
-            <div class="carousel-caption">
-              <h3>Caption 2</h3>
-              <h2>Text Heading</h2>
+            <div class="text-container">
+              <h2>We believe in keeping our </h2>
+              <h1>Energy Safe!</h1><span class="ghost-button">
+                <button href="#" class="pull-right btn btn-sharp">Read More</button></span>
             </div>
           </div>
         </div>
-      </div><a data-slide="prev" href="#al-koot-carousel" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a><a data-slide="next" href="#al-koot-carousel" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
     </header>
+    <section id="about-section"> 
+      <div class="container-fluid"> 
+        <h1>Our History, Challenges, Mission &amp; Vision</h1>
+      </div>
+    </section>
   </body>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
-  <script src="js/scripts.min.js" charset="utf-8"></script>
 </html>

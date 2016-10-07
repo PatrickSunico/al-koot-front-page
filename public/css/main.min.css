@@ -7,10 +7,52 @@ html, body {
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
   font-family: "PT Sans", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+#about-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 100%;
+}
+
+.btn-sharp {
+  padding: 12px 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+  color: #fff;
+  -webkit-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+  background-color: #64d570;
+  margin: 0 15px;
+}
+
+.btn-sharp:link {
+  color: white;
+}
+
+.btn-sharp:visited {
+  color: white;
+}
+
+.btn-sharp:hover {
+  background-color: #54b45f;
+  color: white;
+  outline: none;
+}
+
+.btn-sharp:active {
+  outline: none;
+  color: white;
 }
 
 .navbar.navbar-default {
@@ -39,10 +81,11 @@ html, body {
   color: white;
   -webkit-transition: all ease .3s;
   transition: all ease .3s;
+  letter-spacing: 2px;
 }
 
 .navbar.navbar-default ul li a:hover {
-  background-color: #0777bd;
+  background-color: #07629a;
   color: #fff;
 }
 
@@ -132,7 +175,7 @@ html, body {
   .navbar-collapse {
     overflow-x: hidden;
     max-height: none !important;
-    border-top: 1px solid #0777bd;
+    border-top: 1px solid #07629a;
   }
   .navbar-collapse.collapse {
     display: none !important;
@@ -148,21 +191,50 @@ html, body {
   }
 }
 
+h1, h2 {
+  text-align: right;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  text-shadow: 1px 1px 1px #000000;
+  font-weight: bolder;
+  font-size: 90px;
+}
+
+h2 {
+  letter-spacing: 5.8px;
+  font-size: 48px;
+}
+
 .carousel, .item,
 .active, .carousel-inner {
   height: 100%;
+  position: relative;
 }
 
-.bg {
-  width: 100%;
+.item .vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 40, 44, 0.6);
+}
+
+.item .text-container {
+  position: absolute;
+  top: 30%;
+  left: auto;
+  right: 2%;
+  bottom: auto;
+}
+
+.item .bg {
   height: 100%;
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  -o-background-size: cover;
-}
-
-.carousel-inner .item span.carousel-caption {
-  text-align: right;
 }
 
 .custom-indicators li {
@@ -181,5 +253,15 @@ html, body {
   margin: 0 2px;
   width: 20px;
   height: 20px;
-  background-color: #0777bd;
+  background-color: #07629a;
+}
+
+/*
+ * Start Bootstrap - Full Slider (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+html,
+body {
+  height: 100%;
 }
