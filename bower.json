@@ -1,0 +1,30 @@
+{
+  "name": "corporate_website",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "PatrickSunico <apatricksunico@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "font-awesome": "^4.6.3",
+    "normalize-css": "^5.0.0"
+  },
+  "install": {
+    "path": "public/vendor",
+    "sources": {
+      "bootstrap": ["bower_components/bootstrap/dist/css/bootstrap.min.css", "bower_components/bootstrap/dist/js/bootstrap.min.js"],
+      "jquery": "bower_components/jquery/dist/jquery.min.js",
+      "font-awesome": "bower_components/font-awesome/css/font-awesome.min.css"
+    }
+  }
+}
