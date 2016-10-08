@@ -274,6 +274,30 @@ body {
   height: 100%;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.row.no-spacing {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-spacing > [class^="col-"],
+.row.no-spacing > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .row.no-spacing > [class^="col-"],
+  .row.no-spacing > [class*=" col-"] {
+    height: 100%;
+    width: auto;
+  }
+}
+
 .about-wrapper {
   text-align: center;
 }
