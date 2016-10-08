@@ -17,7 +17,7 @@ var gulp = require('gulp'),
       jade: './raw/views/**/*.jade',
       index: './public/index.html',
       scss: './raw/scss/**/*.scss*',
-      js: './raw/js/*.js',
+      js: './raw/js/scripts.js',
       img: './raw/img/*'
     };
 
@@ -55,7 +55,7 @@ var autoprefixerOptions = {
 
   gulp.task('minifyJS', function(){
     return gulp.src(rawPaths.js)
-          .pipe(uglify())
+          // .pipe(uglify())
           .pipe(rename('scripts.min.js'))
           .pipe(gulp.dest(output.jsOut));
   });

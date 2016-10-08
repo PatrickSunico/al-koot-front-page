@@ -10,11 +10,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="js/scripts.min.js" charset="utf-8"></script>
-  </head>
-  <body id="page-top" data-spy="page-scroll" data-target=".navbar-fixed-top">
     <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
       <!-- Brand and toggle get grouped for better mobile display-->
       <div class="container-fluid">
@@ -30,11 +25,19 @@
             <li><a href="#">Human Resources</a></li>
             <li><a href="#">Contacts</a></li>
             <li><a href="#" class="isolate">عربى</a></li>
-            <li><a href="#" class="isolate"><i aria-hidden="true" class="fa fa-search"></i></a></li>
+            <!--Drop down search box-->
+            <li class="visible-xs visible-sm visible-md">
+              <form action="#" method="GET" role="search">
+                <div class="search-box"> 
+                  <input type="text" name="search" placeholder="Search..." autocomplete="off">
+                </div>
+              </form>
+            </li>
+            <!-- Search button-->
+            <li class="visible-lg"><a href="#" class="isolate"><i aria-hidden="true" class="fa fa-search"></i></a></li>
           </ul>
         </div>
       </div>
-      <!-- /.navbar-collapse-->
     </nav>
     <!-- Full Page Image Background Carousel Header-->
     <header id="al-koot-carousel" class="carousel slide">
@@ -75,10 +78,12 @@
     </div>
     <section>
       <div class="container"> 
-        <div class="about-wrapper">
-          <h3>Our History, Challenges, Mission &amp; Vision</h3>
-          <hr class="line">
-          <p>Named after a historical fort, Al Koot, one of the oldest forts in the country which was built in the ottoman period in 1880 when Doha was little more than a village, the company is a symbol of protection for the energy industry.</p><a href="#" class="text-center btn btn-sharp">Read More</a>
+        <div class="row">
+          <div class="about-wrapper">
+            <h3>Our History, Challenges, Mission &amp; Vision</h3>
+            <hr class="line">
+            <p class="col-md-10 col-md-offset-1">Named after a historical fort, Al Koot, one of the oldest forts in the country which was built in the ottoman period in 1880 when Doha was little more than a village, the company is a symbol of protection for the energy industry.</p><a href="#" class="text-center btn btn-sharp">Read More</a>
+          </div>
         </div>
       </div>
     </section>
@@ -110,5 +115,8 @@
         </div>
       </div>
     </section>
-  </body>
+    <script src="vendor/jquery/jquery.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/scripts.min.js" charset="utf-8"></script>
+  </head>
 </html>

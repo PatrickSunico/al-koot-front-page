@@ -18,7 +18,7 @@ h1, h2, h2, h3, h4, h5, h6, p {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 32px;
   color: #1d73a8;
   text-transform: uppercase;
   font-weight: bold;
@@ -32,7 +32,7 @@ section {
 }
 
 .btn-sharp {
-  padding: 14px 18px;
+  padding: 10px 14px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -42,6 +42,7 @@ section {
   transition: all 0.30s ease-in-out;
   background-color: #64d570;
   margin: 0 15px;
+  font-size: 16px;
 }
 
 .btn-sharp:link {
@@ -53,7 +54,7 @@ section {
 }
 
 .btn-sharp:hover {
-  background-color: #5ce76d;
+  background-color: #6dc177;
   color: white;
   outline: none;
 }
@@ -63,11 +64,17 @@ section {
   color: white;
 }
 
+.animate-ease {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 .navbar.navbar-default {
   border-radius: 0;
-  background-color: rgba(7, 119, 189, 0.8);
+  background-color: rgba(7, 119, 189, 0.9);
   border-color: transparent !important;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .navbar.navbar-default ul li {
@@ -97,6 +104,44 @@ section {
   color: #fff;
 }
 
+.navbar.navbar-default ul li .search-box input {
+  background: none;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 18px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar.navbar-default ul li .search-box ::-webkit-input-placeholder {
+  color: white;
+}
+
+.navbar.navbar-default ul li .search-box input:focus, .navbar.navbar-default ul li .search-box input:active {
+  outline: none;
+}
+
+.navbar.navbar-default ul li .search-box input[type="text"] {
+  border: none;
+  width: 100%;
+}
+
+.navbar.navbar-default ul li .search-box input[type="submit"]:active {
+  color: white;
+  background: #21a1e1;
+}
+
+.navbar.navbar-default ul li .search-box .search-box {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+
+.navbar.navbar-default ul li .search-box input {
+  padding: 20px 15px;
+}
+
 .navbar-header .navbar-brand {
   height: auto;
   padding: 15px 15px;
@@ -111,6 +156,7 @@ section {
 .navbar-header .navbar-toggle {
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-right: 0;
   border: none;
   background: transparent !important;
 }
@@ -197,6 +243,11 @@ section {
     padding: 0;
     border-top: solid 1px #fff;
   }
+  .navbar-collapse.collapse.in ul li a,
+  .navbar-collapse.collapsing ul li a,
+  .navbar-collapse.collapse ul li a {
+    padding: 10px 15px;
+  }
 }
 
 h1, h2 {
@@ -264,16 +315,6 @@ h2 {
   background-color: #07629a;
 }
 
-/*
- * Start Bootstrap - Full Slider (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-html,
-body {
-  height: 100%;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -307,18 +348,50 @@ img {
 }
 
 .about-wrapper hr.line {
-  border: solid 1.8px #64d570;
-  width: 200px;
-  margin: 15px auto;
+  border: solid 1.8px #62f771;
+  width: 120px;
+  margin: 0 auto;
 }
 
 .about-wrapper p {
-  margin: 50px 50px;
   font-size: 22px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .about-wrapper a {
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .container-small {
+    width: 300px;
+  }
+  .container-large {
+    width: 970px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-small {
+    width: 500px;
+  }
+  .container-large {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-small {
+    width: 700px;
+  }
+  .container-large {
+    width: 1500px;
+  }
+}
+
+.container-small, .container-large {
+  max-width: 100%;
 }
 
 .news-container .thumbnail {
