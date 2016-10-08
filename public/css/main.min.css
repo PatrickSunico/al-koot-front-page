@@ -68,11 +68,6 @@ section {
   color: white;
 }
 
-.animate-ease {
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
 @font-face {
   font-family: 'PS-Fonts';
   src: url("../fonts/PS-Fonts.eot?q1cbmo");
@@ -332,6 +327,14 @@ h2 {
   background-color: rgba(34, 40, 44, 0.6);
 }
 
+.item .bg {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .item .text-container {
   position: absolute;
   top: 30%;
@@ -340,12 +343,8 @@ h2 {
   bottom: auto;
 }
 
-.item .bg {
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.item .text-container .btn-sharp {
+  margin: 10px 15px;
 }
 
 .custom-indicators li {
@@ -530,8 +529,9 @@ img {
   clear: both;
 }
 
-.news-container .btn-btn-sharp {
+.news-container .btn-sharp {
   text-align: center;
+  margin: 20px 15px;
 }
 
 @media (min-width: 768px) {
