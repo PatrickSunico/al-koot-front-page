@@ -27,7 +27,7 @@ h3 {
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: 4px;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 section {
@@ -559,6 +559,10 @@ img {
   .container-large {
     width: 1500px;
   }
+}
+
+.container-small, .container-large {
+  max-width: 100%;
 }
 
 .partners-section {
