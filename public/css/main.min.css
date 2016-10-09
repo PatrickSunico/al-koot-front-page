@@ -28,11 +28,11 @@ h1, h2 {
   letter-spacing: 9px;
   text-shadow: 1px 1px 1px #000000;
   font-weight: bolder;
-  font-size: 90px;
+  font-size: 86px;
 }
 
 h2 {
-  letter-spacing: 5.8px;
+  letter-spacing: 5.2px;
   font-size: 48px;
 }
 
@@ -57,7 +57,7 @@ h5 {
   color: #4A87B3;
 }
 
-h6.footer-header {
+h6.sitemap-header {
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -333,10 +333,19 @@ section {
 }
 
 .carousel, .item,
-.active, .carousel-inner {
+.active, .carousel-inner, .fallback {
   height: 100%;
   position: relative;
-  margin-top: 36px;
+}
+
+.fallback {
+  background: #3a7bd5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #3a7bd5, #3a6073);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(right, #3a7bd5, #3a6073);
+  background: linear-gradient(to left, #3a7bd5, #3a6073);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .item .vignette {
@@ -357,6 +366,7 @@ section {
 }
 
 .item .text-container {
+  display: none;
   position: absolute;
   top: 30%;
   left: auto;
@@ -387,45 +397,50 @@ section {
   background-color: #fff;
 }
 
-@media only screen and (max-width: 1200px) {
-  header {
-    min-height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media only screen and (max-width: 991px) {
+  .carousel, .item,
+  .active, .carousel-inner {
+    height: 600px;
   }
-  .header-section {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    padding: 0 50px;
+  .carousel-inner .text-container h1, .carousel-inner .text-container h2 {
+    font-size: 6.2vw;
+    margin: 5px 0 5px 0;
+    letter-spacing: 2px;
   }
-  .header-section .headline {
-    height: 100%;
-    max-width: 1000px;
-    margin: 10px auto;
+  .carousel-inner .text-container h2 {
+    font-size: 3.6vw;
+    margin: 5px 0 5px 0;
+    letter-spacing: 2px;
   }
-  .header-section .headline .line {
-    width: 200px;
-    border-width: 4px;
-    border-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel, .item,
+  .active, .carousel-inner {
+    height: 500px;
   }
-  .header-section .headline h1, .header-section .headline h2 {
-    font-size: 25px;
-    margin: 20px auto;
+  .carousel-inner .text-container h1, .carousel-inner .text-container h2 {
+    font-size: 6.2vw;
+    margin: 5px 0 5px 0;
+    letter-spacing: 2px;
   }
-  .header-section .headline a.btn {
-    margin: 10px 0;
-    padding: 10px 12px;
-    font-weight: 700;
+  .carousel-inner .text-container h2 {
+    font-size: 3.6vw;
+    margin: 5px 0 5px 0;
+    letter-spacing: 2px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .carousel-inner .text-container h1, .carousel-inner .text-container h2 {
+    font-size: 2em;
+    margin: 5px 0 5px 0;
+    letter-spacing: 2px;
+  }
+  .carousel-inner .text-container h2 {
+    font-size: 1.40em;
+    margin: 5px 0 5px 0;
     letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 0;
-    color: #fff;
-    -webkit-transition: all 0.30s ease-in-out;
-    transition: all 0.30s ease-in-out;
-    text-decoration: none;
   }
 }
 
@@ -647,6 +662,28 @@ img {
   padding: 40px 0 10px;
 }
 
+.sitemap-container .social-links {
+  text-align: center;
+}
+
+.sitemap-container .social-links a {
+  display: inline-block;
+}
+
+.sitemap-container .social-links a:first-child {
+  padding: 5px 15px 0 0;
+}
+
+.sitemap-container .social-links a:nth-child(n+2) {
+  padding: 5px 15px;
+}
+
+.sitemap-container .social-links a i {
+  padding: 10px;
+  border-radius: 60px;
+  border: solid 1px #fff;
+}
+
 .sitemap-container ul li {
   font-size: 16px;
   list-style-type: none;
@@ -666,17 +703,21 @@ img {
 .sitemap-container ul li a:hover {
   color: #4d92bd;
   -webkit-transition: .2s;
-  /* ...and now for the proper property */
   transition: .2s;
 }
 
 .sitemap-container ul li p strong {
   color: white;
   padding-right: 4px;
+  display: inline-block;
 }
 
 .sitemap-container ul li p {
   color: white;
+}
+
+.sitemap-container ul li p a {
+  display: inline-block;
 }
 
 .footer {
