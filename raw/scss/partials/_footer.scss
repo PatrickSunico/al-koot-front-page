@@ -1,0 +1,136 @@
+#bg-parallax {
+  background-image: url('../img-min/footer-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+  opacity: 0.9;
+  .vignette {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(#025696, 0.9);
+  }
+}
+
+// Site Map
+.sitemap-container {
+  h6 {
+    padding: 40px 0 10px;
+  }
+  .social-links {
+    // display: inline-block;
+    // padding: 5px;
+    text-align:center;
+
+    a {
+      display: inline-block;
+      &:first-child {
+        padding: 5px 15px 0 0;
+      }
+      &:nth-child(n+2) {
+        padding: 5px 15px;
+      }
+
+      i {
+        padding: 10px;
+        border-radius: 60px;
+        border: solid 1px #fff;
+      }
+    }
+  }
+
+  ul li{
+
+
+    font-size: 16px;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 15px;
+    color: #fff;
+    a {
+      padding: 0 0 2px 0;
+      display: block;
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: #4d92bd;
+        -ms-transition:.2s;
+        -moz-transition:.2s;
+        -webkit-transition:.2s;
+        transition:.2s;
+      }
+    }
+    p strong{
+      color: white;
+      padding-right: 4px;
+      display: inline-block;
+    }
+
+    p {
+      color: white;
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+
+// Footer
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #015B95;
+
+  p {
+    color: white;
+    font-size: 16px;
+  }
+  ul {
+    margin: 0;
+  }
+  ul li {
+    list-style: none;
+    display: inline-block;
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      color: white;
+      &:hover {
+        color: #4d92bd;
+        -o-transition:.2s;
+        -ms-transition:.2s;
+        -moz-transition:.2s;
+        -webkit-transition:.2s;
+        /* ...and now for the proper property */
+        transition:.2s;
+      }
+    }
+    .divider {
+      color: white;
+    }
+  }
+  .iso {
+    float: right;
+
+    img {
+      float: left;
+      height: auto;
+      width: 60px;
+      margin: 0 10px 10px 0;
+    }
+    p {
+      // float: right
+      text-align: left;
+      margin: 5px 0 5px 0;
+      color: white;
+    }
+  }
+}

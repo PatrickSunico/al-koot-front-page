@@ -1,0 +1,132 @@
+.carousel,.item,
+.active,.carousel-inner, .fallback {
+    height: 100%;
+    position: relative;
+    // Change code
+    // margin-top: 36px;
+}
+
+.fallback {
+  background: #3a7bd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #3a7bd5 , #3a6073); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #3a7bd5 , #3a6073); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.item {
+  .vignette{
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background-color:rgba(34, 40, 44, 0.60);
+    }
+  .bg {
+      height: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .text-container {
+    display:none;
+    position: absolute;
+    top: 30%;
+    left: auto;
+    right: 2%;
+    bottom: auto;
+    .btn-sharp {
+      margin: 10px 15px;
+    }
+  }
+}
+
+// Custom Carousel-indicators
+.custom-indicators {
+  li {
+     margin: 0 2px;
+     width: 15px;
+     height: 15px;
+     border: solid 1px #fff;
+     border-radius: 100%;
+     line-height: 20px;
+     color: #fff;
+     transition: all 0.25s ease;
+     &.active, &:hover {
+       margin: 0 2px;
+       width: 15px;
+       height: 15px;
+       background-color: #fff;
+     }
+   }
+}
+
+
+// Small Devices
+@include breakpoint-991-lg {
+  .carousel,.item,
+  .active,.carousel-inner {
+      height: 600px;
+  }
+  .carousel-inner {
+    .text-container {
+      h1 {
+        font-size: 6.2vw;
+        margin: 5px 0 5px 0;
+        letter-spacing: 2px;
+      }
+      h2 {
+        font-size: 3.6vw;
+        margin: 5px 0 5px 0;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+@include breakpoint-768-lg {
+  .carousel,.item,
+  .active,.carousel-inner {
+      height: 500px;
+  }
+  .carousel-inner {
+    .text-container {
+      h1 {
+        font-size: 6.2vw;
+        margin: 5px 0 5px 0;
+        letter-spacing: 2px;
+      }
+      h2 {
+        font-size: 3.6vw;
+        margin: 5px 0 5px 0;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+@include breakpoint-320-lg {
+  .carousel-inner {
+    .text-container {
+      h1 {
+        font-size: 2em;
+        margin: 5px 0 5px 0;
+        letter-spacing: 2px;
+      }
+      h2 {
+        font-size: 1.40em;
+        margin: 5px 0 5px 0;
+        letter-spacing: 1px;
+      }
+      .btn.btn-sharp {
+
+      }
+    }
+  }
+}
+
+
+// Small Devices
+@include breakpoint-1200-lg {
+
+}

@@ -1,0 +1,69 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no')
+
+    title Al Koot
+
+    link(rel='stylesheet', href='vendor/normalize-css/normalize.css')
+    
+    //- CDN BS
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    
+    //- //- Local BS
+    //- link(rel="stylesheet", href="vendor/bootstrap/css/bootstrap.min.css")
+    
+    //- link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=PT+Sans")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato:700")
+
+    link(rel='stylesheet', href='css/main.min.css')
+
+  body
+    
+
+
+    //- navigation
+    include ../views/partials/navbar.jade
+    //- Carousel
+
+    include ../views/partials/carousel.jade
+    
+    //- Services
+    include ../views/partials/services-section.jade
+    
+    //- About
+    include ../views/partials/about-section.jade
+    
+    //- News & Updates
+    include ../views/partials/news-updates.jade
+    
+    //- Partners
+    
+    include ../views/partials/partners.jade
+    
+    //- Footer 
+    include ../views/partials/footer.jade
+    
+    //- Local
+    //- script(src="vendor/jquery/jquery.min.js", charset="utf-8")
+    //- script(src="vendor/bootstrap/js/bootstrap.min.js", charset="utf-8")
+    
+  
+    //-CDN script
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js", charset="utf-8")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", charset="utf-8")
+    
+    script(src='js/scripts.min.js', charset='utf-8')
+    
+    script.
+      $('.carousel').carousel({
+      interval: 5000 //changes the speed
+      });
+      
+      $(window).load(function(){
+        setTimeout(function() {
+          $('.text-container').fadeIn('2000');
+        }, 100);
+      });
