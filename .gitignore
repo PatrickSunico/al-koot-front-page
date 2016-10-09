@@ -54,6 +54,7 @@ npm-debug.log
 node_modules/
 bower_components/
 raw
+public/partials/
 
 
 # Sublime specific #
