@@ -3,8 +3,6 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     rename = require('gulp-rename'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer'),
     jade = require('gulp-jade'),
@@ -17,7 +15,6 @@ var gulp = require('gulp'),
       jade: './raw/views/**/*.jade',
       index: './public/index.html',
       scss: './raw/scss/**/*.scss*',
-      js: './raw/js/scripts.js',
       img: './raw/img/*'
     };
 
@@ -25,7 +22,6 @@ var gulp = require('gulp'),
     var output = {
       jadeOut: './public/',
       scssOut: './public/css',
-      jsOut: './public/js',
       public: './public/',
       img : './public/img-min/'
     };
@@ -53,13 +49,6 @@ var autoprefixerOptions = {
            .pipe(gulp.dest(output.scssOut));
   });
 
-  gulp.task('minifyJS', function(){
-    return gulp.src(rawPaths.js)
-          // .pipe(uglify())
-          .pipe(rename('scripts.min.js'))
-          .pipe(gulp.dest(output.jsOut));
-  });
-
   gulp.task('image-min',function(){
     return gulp.src(rawPaths.img)
           .pipe(imagemin())
@@ -77,14 +66,12 @@ var autoprefixerOptions = {
       //Watch files on reload
       gulp.watch(rawPaths.index).on('change', browserSync.reload);
       gulp.watch(rawPaths.scss,['sass']).on('change', browserSync.reload);
-      gulp.watch(rawPaths.js).on('change', browserSync.reload);
       gulp.watch(rawPaths.partials);
   });
 
 gulp.task('watch', function(){
   gulp.watch(rawPaths.index).on('change', browserSync.reload);
   gulp.watch(rawPaths.scss,['sass']).on('change', browserSync.reload);
-  gulp.watch(rawPaths.js).on('change', browserSync.reload);
   gulp.watch(rawPaths.jade, ['jade']);
 });
 
@@ -95,4 +82,4 @@ gulp.task('watch', function(){
 // Defaults
 gulp.task('default', ['browser-sync','jade','sass', 'watch']);
 
-gulp.task('succ', ['sass','minifyJS','watch']);
+gulp.task('compile', ['sass','watch']);
