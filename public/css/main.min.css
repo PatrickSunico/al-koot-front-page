@@ -21,6 +21,21 @@ h1, h2, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+h1, h2 {
+  text-align: right;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  text-shadow: 1px 1px 1px #000000;
+  font-weight: bolder;
+  font-size: 90px;
+}
+
+h2 {
+  letter-spacing: 5.8px;
+  font-size: 48px;
+}
+
 h3 {
   font-size: 32px;
   color: #1d73a8;
@@ -30,9 +45,32 @@ h3 {
   margin: 20px 0;
 }
 
+h4 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #5EDC9F;
+}
+
+h5 {
+  font-size: 22px;
+  color: #4A87B3;
+}
+
+h6.footer-header {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 section {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+.row-top-spacing {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .btn-sharp {
@@ -45,7 +83,6 @@ section {
   -webkit-transition: all 0.30s ease-in-out;
   transition: all 0.30s ease-in-out;
   background-color: #64d570;
-  margin: 0 15px;
   font-size: 16px;
 }
 
@@ -77,7 +114,6 @@ section {
 }
 
 [class^="ps-"], [class*=" ps-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'PS-Fonts' !important;
   speak: none;
   font-style: normal;
@@ -85,7 +121,6 @@ section {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -297,25 +332,11 @@ section {
   }
 }
 
-h1, h2 {
-  text-align: right;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 9px;
-  text-shadow: 1px 1px 1px #000000;
-  font-weight: bolder;
-  font-size: 90px;
-}
-
-h2 {
-  letter-spacing: 5.8px;
-  font-size: 48px;
-}
-
 .carousel, .item,
 .active, .carousel-inner {
   height: 100%;
   position: relative;
+  margin-top: 36px;
 }
 
 .item .vignette {
@@ -364,6 +385,48 @@ h2 {
   width: 15px;
   height: 15px;
   background-color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+  header {
+    min-height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header-section {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+  }
+  .header-section .headline {
+    height: 100%;
+    max-width: 1000px;
+    margin: 10px auto;
+  }
+  .header-section .headline .line {
+    width: 200px;
+    border-width: 4px;
+    border-color: white;
+  }
+  .header-section .headline h1, .header-section .headline h2 {
+    font-size: 25px;
+    margin: 20px auto;
+  }
+  .header-section .headline a.btn {
+    margin: 10px 0;
+    padding: 10px 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    color: #fff;
+    -webkit-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    text-decoration: none;
+  }
 }
 
 img {
@@ -508,18 +571,6 @@ img {
   padding: 0 20px;
 }
 
-.news-container .thumbnail .caption span.date h4 {
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-  color: #5EDC9F;
-}
-
-.news-container .thumbnail .caption span.date h5 {
-  font-size: 22px;
-  color: #4A87B3;
-}
-
 .news-container .thumbnail .caption span.paragraph-text p {
   text-align: left;
   font-size: 18px;
@@ -531,7 +582,6 @@ img {
 
 .news-container .btn-sharp {
   text-align: center;
-  margin: 20px 15px;
 }
 
 @media (min-width: 768px) {
@@ -569,6 +619,116 @@ img {
   text-align: center;
 }
 
-.partners-section .partners-panel img {
-  border: solid 1px #000;
+.partners-section .partners-panel {
+  margin-bottom: 20px;
+}
+
+#bg-parallax {
+  background-image: url("../img-min/footer-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+#bg-parallax .vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(2, 86, 150, 0.9);
+}
+
+.sitemap-container h6 {
+  padding: 40px 0 10px;
+}
+
+.sitemap-container ul li {
+  font-size: 16px;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.sitemap-container ul li a {
+  padding: 0 0 2px 0;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.sitemap-container ul li a:hover {
+  color: #4d92bd;
+  -webkit-transition: .2s;
+  /* ...and now for the proper property */
+  transition: .2s;
+}
+
+.sitemap-container ul li p strong {
+  color: white;
+  padding-right: 4px;
+}
+
+.sitemap-container ul li p {
+  color: white;
+}
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #015B95;
+}
+
+.footer p {
+  color: white;
+  font-size: 16px;
+}
+
+.footer ul {
+  margin: 0;
+}
+
+.footer ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.footer ul li a:hover {
+  color: #4d92bd;
+  -webkit-transition: .2s;
+  /* ...and now for the proper property */
+  transition: .2s;
+}
+
+.footer ul li .divider {
+  color: white;
+}
+
+.footer .iso {
+  float: right;
+}
+
+.footer .iso img {
+  float: left;
+  height: auto;
+  width: 60px;
+  margin: 0 10px 10px 0;
+}
+
+.footer .iso p {
+  text-align: left;
+  margin: 5px 0 5px 0;
+  color: white;
 }
